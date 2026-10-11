@@ -6,7 +6,7 @@ A reproducible analysis of the Online Retail transaction dataset: data quality c
 
 The project uses DataCamp's [E-Commerce Data dataset](https://www.datacamp.com/datalab/datasets/dataset-r-e-commerce), which describes an online gift retailer. For a self-contained local run, download the matching [UCI Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail) and save `Online Retail.xlsx` in the project root. The UCI version contains 541,909 transactions from 1 December 2010 through 9 December 2011 and is licensed CC BY 4.0. Please cite Chen (2015), UCI Machine Learning Repository, DOI: 10.24432/C5BW33.
 
-The script can also fetch UCI dataset 352 directly if no local file is supplied. Data files are not committed to this repository.
+The script can also fetch UCI dataset 352 directly if no local file is supplied. The full source data is not committed; the repository includes a 100-row DataCamp CSV sample for the dashboard.
 
 ## Run
 
@@ -44,3 +44,10 @@ The forecast is intentionally trend-only: a single annual cycle is too little hi
 
 - DataCamp: [E-Commerce Data](https://www.datacamp.com/datalab/datasets/dataset-r-e-commerce)
 - Chen, D. (2015). [Online Retail](https://archive.ics.uci.edu/dataset/352/online+retail). UCI Machine Learning Repository. DOI: 10.24432/C5BW33. Licensed CC BY 4.0.
+
+
+## Interactive dashboard
+
+Open `index.html` locally, or enable GitHub Pages from the `main` branch and repository root. The dashboard loads `sales-data.csv` automatically when hosted; when opening the file locally, use **Import CSV** to load it. The included CSV is a small 100-row sample from December 2010, so it is not suitable for a meaningful multi-month forecast. The dashboard calculates transaction revenue from quantity × unit price and counts distinct invoices as orders. User-provided transaction data stays in the public repository as requested.
+
+See `outputs/README.md` for details on the dashboard and the CSV format.
